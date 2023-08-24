@@ -1,3 +1,6 @@
+@import 'utilities';
+@import 'btnConfig';
+@import 'config';
 
 * {
   box-sizing: border-box;
@@ -12,6 +15,7 @@ body {
 }
 
 img {
+
   border-radius: 50%;
 }
 
@@ -20,16 +24,36 @@ a {
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  @include set-bg($primary-color);
+  
+  nav{
+      display:flex;
+  }
 
-  // Take a look at the other files we've built already. How can they be useful here?
+  ul{
+    display: flex;
+    list-style-type:none;
+    padding:5px;
+    
+  }
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+  a{
+    color: text-color-picker($primary-color)
+  }
+
 }
 
+.hero-content{
+  display:flex;
+  margin-top:100px;
+    img{
+      height:400px;
+      margin-top:-100px;
+    }
+
+
+
+}
 // This code is related to some of the aspects of SCSS we have yet to cover.
 // While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
 $spaceamounts: (1,2,3,4,5);
