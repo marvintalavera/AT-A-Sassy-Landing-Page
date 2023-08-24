@@ -38,7 +38,7 @@ a {
   }
 
   a{
-    color: text-color-picker($primary-color)
+    color: utilities.text-color-picker(config.$primary-color)
   }
 
 }
